@@ -32,9 +32,18 @@ public class Ejemplo09 {
         int suma = 0;
         int contador_calificaciones = 0;
         
-        cadenaFinal = "Listado de Notas\n";
+        
+        
+        cadenaFinal = "Listado de Notas\n" + "calificacion";
         
         do {
+            
+            System.out.println("Ingrese el nombre del estudiante");
+            nombre = entrada.nextLine();
+            
+            System.out.println("Ingrese las notas del estudiate");
+            nota = entrada.nextInt();
+           
             
             
             // agrego valor al acumulador
@@ -42,6 +51,8 @@ public class Ejemplo09 {
             // agrego una unidad al contador para luego sacar el promedio
             contador_calificaciones = contador_calificaciones + 1;
             
+             cadenaFinal = String.format("%sCalificacion %d "
+                    + "del estudiante %s\n", cadenaFinal,nota,nombre.toLowerCase());
             
             System.out.println("Ingrese (-111) si desea salir del ciclo; "
                     + "cualquier otro número para continuar");
